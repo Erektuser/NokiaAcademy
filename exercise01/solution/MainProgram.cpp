@@ -17,6 +17,7 @@ MainProgram::MainProgram(const std::shared_ptr<framework::IMessageReceiver> & re
 
 void MainProgram::run()
 {
+    const char*  msg = receiver->receive();
     // Write main loop with handling exit message
     // Run test. Verify that program runs and closes properly
 }

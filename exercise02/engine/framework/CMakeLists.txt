@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8.11)
+project(Framework)
+add_definitions("-std=c++14 -Ofast -fPIC")
+aux_source_directory("${PROJECT_SOURCE_DIR}/source" SRC_LIST)
+add_library(${PROJECT_NAME} OBJECT  ${SRC_LIST})
+include_directories("${PROJECT_SOURCE_DIR}/../public")
+target_include_directories(${PROJECT_NAME} PRIVATE "${PROJECT_SOURCE_DIR}/include")
